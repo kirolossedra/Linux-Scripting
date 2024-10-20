@@ -66,3 +66,94 @@ Congratulations! You just created and ran your first shell script using Bash on 
 ```
 
 Congratulations! You have successfully executed your first Bash shell script.
+
+
+
+
+# Exercise 2 - Using a Shebang Line
+
+In this exercise, you will modify the `greet.sh` script by adding a shebang line and making it an executable file. This allows you to run the script as a command.
+
+## 2.1 Find the Path to the Interpreter
+To find the path of the `bash` command, use the `which` command:
+
+```bash
+which bash
+```
+
+This command should return the path, typically `/bin/bash`.
+
+## 2.2 Edit the Script to Add the Shebang Line
+Open the `greet.sh` file and add the following line at the very beginning of the script:
+
+```bash
+#! /bin/bash
+```
+
+### Updated Script
+Your script should now look like this:
+
+```bash
+#! /bin/bash
+# This script accepts the user's name and prints 
+# a message greeting the user
+
+# Print the prompt message on screen
+echo -n "Enter your name: " 
+
+# Wait for user to enter a name, and save it into the variable 'name'
+read name 
+
+# Print the welcome message followed by the name
+echo "Welcome $name"
+
+# The following message should print on a single line
+echo -n "Congratulations! You just created and ran your first shell script "
+echo "using Bash on IBM Skills Network"
+```
+
+## 2.3 Check the Permissions of the Script
+To make `greet.sh` executable, you need to add execute permissions for the user. Enter the following command:
+
+```bash
+chmod +x greet.sh
+```
+
+### Verify Execute Permission
+Check whether the execute permission has been granted by running:
+
+```bash
+ls -l greet.sh
+```
+
+### Limit Execute Permissions
+For better security, it’s often best to limit execute permissions to only the owner. To do this, run:
+
+```bash
+chmod u+x greet.sh
+```
+
+### Verify Permissions Again
+Check the permissions again to ensure they are set correctly:
+
+```bash
+ls -l greet.sh
+```
+
+If you wish to grant execute permission to everyone, you can run:
+
+```bash
+chmod +x greet.sh
+```
+
+## 2.4 Execute the Script
+To run the shell script, enter the following command:
+
+```bash
+./greet.sh
+```
+
+### Explanation
+The `.` here refers to the current directory, telling Linux to execute the `greet.sh` script located in the current directory.
+
+Congratulations! You have successfully added a shebang line and made your script executable.
