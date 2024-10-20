@@ -157,3 +157,71 @@ To run the shell script, enter the following command:
 The `.` here refers to the current directory, telling Linux to execute the `greet.sh` script located in the current directory.
 
 Congratulations! You have successfully added a shebang line and made your script executable.
+
+
+
+
+# Practice Exercise
+
+## Task
+Create a script named `greetnew.sh` that takes the first and last names of the user, saves them in corresponding variables (`firstname` and `lastname`), and prints a welcome message.
+
+### Step-by-Step Instructions
+
+### 1. Create the Script File
+Open your terminal and create a new script file named `greetnew.sh`:
+
+```bash
+nano greetnew.sh
+```
+
+### 2. Add the Shebang Line
+At the top of the file, add the shebang line to specify the Bash interpreter:
+
+```bash
+#!/bin/bash
+```
+
+### 3. Write the Script
+Add the following lines to the script to prompt for the first and last names, save them in variables, and print a welcome message:
+
+```bash
+# This script greets the user with their full name
+
+# Prompt for the first name
+echo -n "Enter your first name: "
+read firstname
+
+# Prompt for the last name
+echo -n "Enter your last name: "
+read lastname
+
+# Print the welcome message
+echo "Hello $firstname $lastname"
+```
+
+### 4. Save and Exit
+If you're using `nano`, save your changes by pressing `CTRL + O`, then exit with `CTRL + X`.
+
+### 5. Make the Script Executable
+Run the following command to add execute permissions:
+
+```bash
+chmod +x greetnew.sh
+```
+
+### 6. Execute the Script
+Run the script using:
+
+```bash
+./greetnew.sh
+```
+
+### 7. Input Your Names
+When prompted, enter your first and last names. You should see a welcome message similar to:
+
+```
+Hello John Doe
+```
+
+Congratulations! You have successfully created and executed your `greetnew.sh` script.
